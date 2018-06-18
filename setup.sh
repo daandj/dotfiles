@@ -32,3 +32,8 @@ for file in $files; do
   echo "Creating symlink to $file in home directory."
   ln -s $dir/.$file ~/.$file
 done
+
+# Install Vundle, a vim plugin manager, if it's not already installed.
+if [ ! -d $dir/.vim/bundle/Vundle.vim ]; then
+	git clone https://github.com/VundleVim/Vundle.vim.git $dir/.vim/bundle/Vundle.vim
+fi

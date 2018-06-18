@@ -1,6 +1,10 @@
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/Daan/.oh-my-zsh
 
+# Path to gcc-cross-compiler:
+export PATH="$HOME/opt/cross/bin:$PATH"
+export PATH="$HOME/opt/hosted/bin:$PATH"
+
 source ~/.shell_prompt.sh # custom promptline prompt
 
 DEFAULT_USER="Daan"
@@ -15,6 +19,10 @@ export VISUAL=$EDITOR
 
 # set up aliases.
 source ~/.oh-my-zsh/lib/alias.zsh
+
+# set up bochs emulator
+export PATH="$PATH:$HOME/opt/bochs/bin"
+export BXSHARE="$HOME/opt/bochs/share/bochs"
 
 # Uncomment the following line to use case-sensitive completion.
 CASE_SENSITIVE="true"
@@ -54,7 +62,7 @@ ENABLE_CORRECTION="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git tmuxinator)
+# plugins=(git tmuxinator)
 
 # User configuration
 

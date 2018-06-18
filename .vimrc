@@ -1,11 +1,15 @@
 " give us 256 color schemes! 
 set term=screen-256color
 
+" set up correct syntax highlighting for nasm
+:let asmsyntax = "nasm"
+
 " better split navigations
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+nnoremap <C-T> <C-W><C-T>
 
 " remap the escape key to 'jk'
 inoremap jk <ESC>
@@ -13,6 +17,16 @@ inoremap jk <ESC>
 " display (relative)line numbers
 set number
 set relativenumber
+
+" fix netrw
+let g:netrw_banner = 0
+let g:netrw_browse_split = 4
+let g:netrw_winsize = 15
+let g:netrw_altv = 1
+augroup ProjectDrawer
+  autocmd!
+  autocmd VimEnter * :Vexplore
+augroup END
 
 " better commenting
 let s:comment_map = { 
@@ -39,7 +53,8 @@ let s:comment_map = {
     \   "vim": '"',
     \   "tex": '%',
 		\		"zsh": '#',
-    \ }
+    \		"nasm": ';'
+		\	}
 
 function! ToggleComment()
   if has_key(s:comment_map, &filetype)

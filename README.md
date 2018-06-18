@@ -10,4 +10,8 @@ Then run the script to install the symlinks:
 $ cd ~/dotfiles
 $ ./setup.sh
 ```
+Now open vim and rum the following commands:
+- `:PluginInstall`, to install all plugins managed by Vundle.
+- `:PromptlineSnapshot ~/.shell_prompt.sh airline`, to set up promptline.
+
 That's it!
