@@ -15,3 +15,7 @@ Now open vim and rum the following commands:
 - `:PromptlineSnapshot ~/.shell_prompt.sh airline`, to set up promptline.
 
 That's it!
+
+## Possible problems and fixes
+
+When the powerline glyphs don't render correctly, try checking the `Use built-in Powerline glyphs` option in iTerm under `Preferences>Profiles>Text`

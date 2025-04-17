@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/Daan/.oh-my-zsh
+export ZSH=/Users/daandejong/.oh-my-zsh
 
 # Path to gcc-cross-compiler:
 export PATH="$HOME/opt/cross/bin:$PATH"
@@ -7,7 +7,7 @@ export PATH="$HOME/opt/hosted/bin:$PATH"
 
 source ~/.shell_prompt.sh # custom promptline prompt
 
-DEFAULT_USER="Daan"
+DEFAULT_USER="daandejong"
 setopt RM_STAR_WAIT
 setopt CORRECT
 export TERM="xterm-256color"
