@@ -37,3 +37,9 @@ done
 if [ ! -d $dir/.vim/bundle/Vundle.vim ]; then
 	git clone https://github.com/VundleVim/Vundle.vim.git $dir/.vim/bundle/Vundle.vim
 fi
+
+echo "Creating swap and backup directories."
+mkdir -p $dir/.vim/swp
+mkdir -p $dir/.vim/backup
+echo "...done"
+
